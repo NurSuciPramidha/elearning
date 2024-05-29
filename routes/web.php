@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Testing\Constraints\CountInDatabase;
 use PhpParser\Node\Stmt\Return_;
 
 Route::get('/', function () {
@@ -37,3 +39,6 @@ Route::get('admin/dashboard', [DashboardController::class, 'index']);
 
 // route untuk menampilkan halaman student
 Route::get('/admin/student', [StudentController::class, 'index']);
+
+// route untuk menampilkan halaman course
+Route::get('/admin/courses', [CoursesController::class, 'index']);

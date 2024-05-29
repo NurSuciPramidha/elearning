@@ -1,11 +1,11 @@
 @extends('admin.main')
 @section('content')
 <div class="pagetitle">
-    <h1>Student</h1>
+    <h1>Courses</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"></li>
-        <li class="breadcrumb-item active">Student</li>
+        <li class="breadcrumb-item active">Courses</li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
@@ -17,18 +17,16 @@
                     <tr>
                         <th>No</th>
                         <th>Name</th>
-                        <th>NIM</th>
-                        <th>Class</th>
-                        <th>Major</th>
+                        <th>Category</th>
+                        <th>Desc</th>
                         <th>Action</th>
                     </tr>
-                    @foreach ($students as $student)   
+                    @foreach ($courses as $course)   
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $student->name }}</td>
-                        <td>{{ $student->nim }}</td>
-                        <td>{{ $student->class }}</td>
-                        <td>{{ $student->major}}</td>
+                        <td>{{$loop->iteration}}</td>
+                        <td>{{ $course->name }}</td>
+                        <td>{{ $course->category }}</td>
+                        <td>{{ $course->desc}}</td>
                         <td>
                             <a href="#" class="btn btn-warning">Edit</a>
                             <a href="#" class="btn btn-danger">Hapus</a>
