@@ -13,6 +13,7 @@
   <section class="section">
         <div class="card">
             <div class="card-body">
+                <a href="/admin/student/create" class="btn btn-primary my-3">+ Student</a>
                 <table div class="table">
                     <tr>
                         <th>No</th>
@@ -23,12 +24,12 @@
                     </tr>
                     @foreach ($courses as $course)   
                     <tr>
-                        <td>{{$loop->iteration}}</td>
+                        <td>{{ $loop->iteration }}</td>
                         <td>{{ $course->name }}</td>
                         <td>{{ $course->category }}</td>
-                        <td>{{ $course->desc}}</td>
+                        <td>{{ $course->desc }}</td>
                         <td>
-                            <a href="#" class="btn btn-warning">Edit</a>
+                            <a href="/admin/course/edit/{{ $course->id }}" class="btn btn-warning">Edit</a>
                             <a href="#" class="btn btn-danger">Hapus</a>
                         </td>
                     </tr>

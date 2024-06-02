@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 
 class CoursesController extends Controller
 {
-    //method untuk menampilkan data student
+    //menampilkan data Courses dari database
     public function index(){
-        // tarik data student dari db 
+        // mendapatkan data dari table courses
         $courses = Courses::all();
-        
-        // panggil view dan kirim data students
+
+        // kirim data ke view untuk menampilkan
         return view('admin.contents.courses.index', [
-            'courses' => $courses,
+            'courses' => $courses
         ]);
     }
 }
