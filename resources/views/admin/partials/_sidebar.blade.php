@@ -20,7 +20,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/admin/courses">
-          <i class="bi bi-mortarboard"></i>
+          <i class="bi bi-card-list"></i>
           <span>Courses</span>
         </a>
       </li>
