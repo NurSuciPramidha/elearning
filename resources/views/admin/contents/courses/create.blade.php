@@ -1,11 +1,11 @@
 @extends('admin.main')
 @section('content')
 <div class="pagetitle">
-    <h1>Student</h1>
+    <h1>+ Courses</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"></li>
-        <li class="breadcrumb-item active">Student</li>
+        <li class="breadcrumb-item">Courses</li>
+        <li class="breadcrumb-item active">Courses</li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
@@ -13,7 +13,7 @@
   <section class="section">
         <div class="card">
             <div class="card-body">
-                <form action="/admin/course/store" method="post" class="mt-3">
+                <form action="/admin/courses/store" method="post" class="mt-3">
                     @csrf
                     <div class="mb-2">
                         <label for="name" class="form-label">Name</label>
