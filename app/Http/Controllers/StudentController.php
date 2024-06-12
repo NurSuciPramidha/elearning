@@ -62,7 +62,8 @@ class StudentController extends Controller
         $student = Student::find($id);  // find menyingkat perinth Select * FROM students WHERE id = $id;
 
         return view('admin.contents.student.edit',[
-            'student' => $student
+            'student' => $student,
+            // 'courses' => $courses,
         ]);
     }
 
@@ -77,6 +78,7 @@ class StudentController extends Controller
             'nim' => 'required|numeric',
             'major' => 'required',
             'class' => 'required',
+            'course_id' => 'nullable',
         ]);
 
         // simpan perubahan
@@ -85,6 +87,7 @@ class StudentController extends Controller
         'nim' => $request->nim,
         'major' => $request->major,
         'class' => $request->class,
+        'courses_id' => $request->corse_id,
         ]);
 
         // kembali ke halaman student
