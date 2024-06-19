@@ -44,22 +44,22 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // route untuk menampilkan halaman student
-    Route::get('/admin/student', [StudentController::class, 'index']);
+    Route::get('/admin/student', [StudentController::class, 'index'])->middleware('admin');
 
     // route untuk menampilkan halaman course
     Route::get('/admin/courses', [CoursesController::class, 'index']);
 
     // route untuk menampilkan halaman form tambah student
-    Route::get('/admin/student/create', [StudentController::class, 'create']);
+    Route::get('/admin/student/create', [StudentController::class, 'create'])->middleware('admin');
 
     // route untuk mengirim data student
-    Route::post('/admin/student/store', [StudentController::class, 'store']);
+    Route::post('/admin/student/store', [StudentController::class, 'store'])->middleware('admin');
 
     // route untuk menampilkan halaman form edit student
-    Route::get('admin/student/edit/{id}', [StudentController::class, 'edit']);
+    Route::get('admin/student/edit/{id}', [StudentController::class, 'edit'])->middleware('admin');
 
     // route untuk menyimpan hasil student
-    Route::put('admin/student/update/{id}', [StudentController::class, 'update']);
+    Route::put('admin/student/update/{id}', [StudentController::class, 'update'])->middleware('admin');
 
     // route untuk menghapus data student
     Route::delete('admin/student/delete/{id}', [StudentController::class, 'destroy']);

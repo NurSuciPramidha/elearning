@@ -11,12 +11,14 @@
       </li>
       <!-- End Dashboard Nav -->
 
+      @if (Auth::user()->role == 'admin')
       <li class="nav-item">
         <a class="nav-link collapsed" href="/admin/student">
           <i class="bi bi-mortarboard"></i>
           <span>Student</span>
         </a>
       </li>
+      @endif
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/admin/courses">
